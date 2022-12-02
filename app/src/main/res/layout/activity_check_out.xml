@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckOut">
+
+    <LinearLayout
+        android:id="@+id/checkout"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/visa" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkout">
+
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/roundcorner"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="12dip"
+            android:selectAllOnFocus="true" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText1"
+            android:layout_alignStart="@+id/editText1"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/roundcorner"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="numberPassword"
+            android:padding="12dip" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/roundcorner"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dip" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText3"
+            android:layout_alignStart="@+id/editText3"
+            android:layout_alignLeft="@+id/editText3"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/roundcorner"
+            android:padding="12dip"
+            android:ems="10"
+            android:hint="Card Name"
+            android:inputType="date"
+             />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText4"
+            android:layout_alignStart="@+id/editText4"
+            android:layout_alignLeft="@+id/editText4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/roundcorner"
+            android:ems="10"
+            android:hint="Card Number"
+            android:inputType="phone"
+            android:padding="12dip" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="119dp"
+                android:layout_height="48dp"
+
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="1dp"
+
+                android:layout_weight="1"
+                android:background="@drawable/roundcorner"
+                android:hint="Expiry"
+                android:inputType="date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.832" />
+
+            <EditText
+                android:id="@+id/editTextDate2"
+                android:layout_width="139dp"
+                android:layout_height="48dp"
+
+                android:layout_marginLeft="40dp"
+
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundcorner"
+                android:hint="CVV"
+                android:inputType="date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText5"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="62dp"
+            android:backgroundTint="#7E2D49"
+
+            android:padding="12dip"
+            android:text="Submit"
+            android:textSize="16sp"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="40dp"
+        android:background="#7E2D49"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/homebutton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/homeicon">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/listbutton"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/listicon">
+
+        </ImageView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
